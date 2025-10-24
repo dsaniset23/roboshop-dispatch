@@ -1,5 +1,5 @@
 FROM        redhat/ubi9
-RUN         dnf install golang -y
+RUN         dnf install golang -y && dnf clean all
 WORKDIR     /app
 RUN         useradd -d /app roboshop && chown roboshop:roboshop /app
 USER        roboshop
